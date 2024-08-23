@@ -1,0 +1,30 @@
+{
+  "name": "8-course-project_base_initialize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --config webpack.config.js --mode development",
+    "serve": "webpack serve --config webpack.config.js --mode development --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "toastr": "^2.1.4",
+    "typed.js": "^2.1.0",
+    "validate.js": "^0.13.1"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "html-webpack-plugin": "^5.5.0"
+  }
+}
