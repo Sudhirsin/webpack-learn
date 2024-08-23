@@ -4,6 +4,7 @@ import bootstrap from 'bootstrap';
 import Typed from 'typed.js';
 import validate from 'validate.js';
 import toastr from 'toastr';
+// import banner from './assets/banner-image.png'
 
 import './index.css'
 import './_vendor.scss'
@@ -56,3 +57,7 @@ const footerCol3 = $("#footer-column-3")[0];
 buildFooterItems(footerCol1, footerCol1Items);
 buildFooterItems(footerCol2, footerCol2Items);
 buildFooterItems(footerCol3, footerCol3Items);
+
+// 1 st way to load the images
+// const bannerImg = $('#bannerImg')[0];
+// bannerImg.src = banner
