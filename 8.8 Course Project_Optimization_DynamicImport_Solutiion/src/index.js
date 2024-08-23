@@ -60,6 +60,7 @@ buildFooterItems(footerCol2, footerCol2Items);
 buildFooterItems(footerCol3, footerCol3Items);
 
 $("#pricing-plan").on("click", function () {
+  // dynamic imports and lazy loading
   import(/* webpackChunkName: "modal" */"./components/modal")
     .then((module) => {
       const showModal = module.default;
