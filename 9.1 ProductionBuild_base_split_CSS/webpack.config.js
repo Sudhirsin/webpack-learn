@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
@@ -20,11 +21,13 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        // use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        // style-loader is used to inject the css in html after gettin all the compiles css from css-loader
       },
       {
         test: /\.s[ac]ss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpeg|jpg|gif)$/,
@@ -53,7 +56,8 @@ module.exports = {
         },
       ],
     }),
-    new BundleAnalyzerPlugin({}),
+    // new BundleAnalyzerPlugin({}),
+    new MiniCssExtractPlugin(),
   ],
   optimization: {
     splitChunks: {
